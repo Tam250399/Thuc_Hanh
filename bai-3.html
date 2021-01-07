@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function isFibonacci(x) {
+            let fibonacci = [0, 1]
+            if (x == 0 || x == 1) {
+                return true;
+            }
+            while (fibonacci[fibonacci.length - 1] < x) {
+                fibonacci.push(fibonacci[fibonacci.length - 1] + fibonacci[fibonacci.length - 2]);
+            }
+            if (fibonacci[fibonacci.length - 1] == x) {
+                return true;
+            }
+            return false;
+        }
+        let b = isFibonacci(parseInt(prompt("nhập số Fibonacci")))
+        alert(b)
+    </script>
+</body>
+
+</html>
